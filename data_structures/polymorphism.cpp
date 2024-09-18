@@ -2,7 +2,7 @@
 // Created by 郝行健 on 9/17/24.
 // polymorphism means offspring class can have function works differently form parent class
 
-#include <stdio.h>
+#include <iostream>
 #include <sstream>
 using namespace std;
 
@@ -13,6 +13,8 @@ public:
     virtual void action() {
         cout << "do something" << endl;
     }
+
+    virtual ~Animal() = default;
 };
 
 class Dog: public Animal {
@@ -29,11 +31,17 @@ public:
     }
 };
 
-Animal* animal;
-animal.action();
+int main() {
+    Animal* animal;
 
-animal = new Dog();
-animal.action();
+    animal = new Dog();
+    animal->action();
+    delete animal;
 
-animal = new Cat();
-animal.action();
+    animal = new Cow();
+    animal->action();
+
+    delete animal;
+
+    return 0;
+}
