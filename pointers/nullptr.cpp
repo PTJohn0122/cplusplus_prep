@@ -8,6 +8,7 @@ using namespace std;
 
 class Car {
 private:
+    int year;
 public:
     void drive() {
         cout << "The car is vrooming" << endl;
