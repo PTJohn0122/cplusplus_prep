@@ -1,4 +1,4 @@
-# C++ Prep
+# C++ Preperation Notebook
 
 [![](https://skillicons.dev/icons?i=cpp,clion,vscode)](https://skillicons.dev)
 
